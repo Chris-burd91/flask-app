@@ -3,8 +3,8 @@
 {% for post in post %}
         <div>
             <h3>{{ post.title }}</h3>
-	    <h3>{{ post.first_name }}</h3>
-	    <h3>{{ post.last_name }}</h3>
+	    <span>by <i>{{ post.author.first_name }} {{ post.author.last_name }}</i></span>
+            <span>on the <i>{{ post.date_posted }}</i></span>
 	    <h3>{{ post.content }}</h3>
         </div>
 	{% endfor %}	
