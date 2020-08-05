@@ -5,7 +5,8 @@ Description=App Service
 [Service]
 User=chrisburd91
 WorkingDirectory=/home/chrisburd91/flask-app/flask-blog
-ExecStart=/home/chrisburd91/venv/bin/gunicorn --workers=4 --bind=0.0.0.0:5000 app:app
+EnvironmentFile=/home/chrisburd91/flask-app/flask-blog/flask.env
+ExecStart=. ./venv/bin/activate && /home/chrisburd91/flask-app/flask-blog/venv/bin/gunicorn --workers=4 --bind=0.0.0.0:5000 app:app
 
 
 
